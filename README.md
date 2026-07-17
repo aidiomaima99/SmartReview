@@ -156,7 +156,6 @@ SmartReview/
 ├── src/
 │   ├── preprocess.py         ← nettoyage NLP
 │   ├── train_evaluate.py     ← expérience complète (Steps 5–6)
-│   └── generate_reports.py   ← génération des PDF
 ├── notebooks/
 │   └── SmartReview_Experimentation.ipynb
 ├── data/
@@ -167,9 +166,6 @@ SmartReview/
 │   ├── hypotheses_validation.json
 │   └── figures/              ← graphiques
 └── reports/
-    ├── Step5_Collecte_Experimentation.pdf
-    ├── Step6_Interpretation_Analyse.pdf
-    └── Step7_Publication_Dissemination.pdf
 ```
 
 ---
