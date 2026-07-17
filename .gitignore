@@ -1,0 +1,9 @@
+data/aclImdb/
+data/*.tar.gz
+data/*.csv
+models/*.joblib
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.streamlit/
+nltk_data/

@@ -1,0 +1,70 @@
+============================================================
+SmartReview — Expérimentation Master BD & IA
+============================================================
+[OK] Dataset ACL IMDb chargé — 50000 avis
+
+Distribution des classes :
+sentiment
+positive    25000
+negative    25000
+Name: count, dtype: int64
+Longueur moyenne des avis : 1309 caractères
+
+===== Condition : Avec prétraitement NLP =====
+Prétraitement en cours...
+TF-IDF : (40000, 5000) (vectorisation 45.73s)
+  → Entraînement Naive Bayes...
+     Acc=0.8598  F1=0.8625  time=0.05s  CV-F1=0.8603±0.0026
+  → Entraînement Logistic Regression...
+     Acc=0.8871  F1=0.8889  time=1.84s  CV-F1=0.8917±0.0020
+  → Entraînement SVM (LinearSVC)...
+/home/pc/.local/lib/python3.8/site-packages/sklearn/svm/_classes.py:32: FutureWarning: The default value of `dual` will change from `True` to `'auto'` in 1.5. Set the value of `dual` explicitly to suppress the warning.
+  warnings.warn(
+/home/pc/.local/lib/python3.8/site-packages/sklearn/svm/_classes.py:32: FutureWarning: The default value of `dual` will change from `True` to `'auto'` in 1.5. Set the value of `dual` explicitly to suppress the warning.
+  warnings.warn(
+/home/pc/.local/lib/python3.8/site-packages/sklearn/svm/_classes.py:32: FutureWarning: The default value of `dual` will change from `True` to `'auto'` in 1.5. Set the value of `dual` explicitly to suppress the warning.
+  warnings.warn(
+/home/pc/.local/lib/python3.8/site-packages/sklearn/svm/_classes.py:32: FutureWarning: The default value of `dual` will change from `True` to `'auto'` in 1.5. Set the value of `dual` explicitly to suppress the warning.
+  warnings.warn(
+/home/pc/.local/lib/python3.8/site-packages/sklearn/svm/_classes.py:32: FutureWarning: The default value of `dual` will change from `True` to `'auto'` in 1.5. Set the value of `dual` explicitly to suppress the warning.
+  warnings.warn(
+/home/pc/.local/lib/python3.8/site-packages/sklearn/svm/_classes.py:32: FutureWarning: The default value of `dual` will change from `True` to `'auto'` in 1.5. Set the value of `dual` explicitly to suppress the warning.
+  warnings.warn(
+     Acc=0.8839  F1=0.8852  time=1.16s  CV-F1=0.8816±0.0026
+  → Entraînement Random Forest...
+     Acc=0.8515  F1=0.8517  time=77.37s  CV-F1=0.8501±0.0023
+[OK] Meilleur modèle sauvegardé : Logistic Regression
+[OK] Figure sauvegardée : confusion_matrices_avec_prétraitement_nlp.png
+
+===== Condition : Sans prétraitement NLP =====
+Prétraitement en cours...
+TF-IDF : (40000, 5000) (vectorisation 55.52s)
+  → Entraînement Naive Bayes...
+     Acc=0.8559  F1=0.8582  time=0.08s  CV-F1=0.8608±0.0017
+  → Entraînement Logistic Regression...
+     Acc=0.8934  F1=0.8947  time=3.29s  CV-F1=0.8942±0.0037
+  → Entraînement SVM (LinearSVC)...
+/home/pc/.local/lib/python3.8/site-packages/sklearn/svm/_classes.py:32: FutureWarning: The default value of `dual` will change from `True` to `'auto'` in 1.5. Set the value of `dual` explicitly to suppress the warning.
+  warnings.warn(
+/home/pc/.local/lib/python3.8/site-packages/sklearn/svm/_classes.py:32: FutureWarning: The default value of `dual` will change from `True` to `'auto'` in 1.5. Set the value of `dual` explicitly to suppress the warning.
+  warnings.warn(
+/home/pc/.local/lib/python3.8/site-packages/sklearn/svm/_classes.py:32: FutureWarning: The default value of `dual` will change from `True` to `'auto'` in 1.5. Set the value of `dual` explicitly to suppress the warning.
+  warnings.warn(
+/home/pc/.local/lib/python3.8/site-packages/sklearn/svm/_classes.py:32: FutureWarning: The default value of `dual` will change from `True` to `'auto'` in 1.5. Set the value of `dual` explicitly to suppress the warning.
+  warnings.warn(
+/home/pc/.local/lib/python3.8/site-packages/sklearn/svm/_classes.py:32: FutureWarning: The default value of `dual` will change from `True` to `'auto'` in 1.5. Set the value of `dual` explicitly to suppress the warning.
+  warnings.warn(
+/home/pc/.local/lib/python3.8/site-packages/sklearn/svm/_classes.py:32: FutureWarning: The default value of `dual` will change from `True` to `'auto'` in 1.5. Set the value of `dual` explicitly to suppress the warning.
+  warnings.warn(
+     Acc=0.8886  F1=0.8894  time=1.68s  CV-F1=0.8895±0.0032
+  → Entraînement Random Forest...
+     Acc=0.8500  F1=0.8503  time=102.49s  CV-F1=0.8464±0.0035
+[OK] Figure sauvegardée : confusion_matrices_sans_prétraitement_nlp.png
+[OK] Figures comparatives générées
+
+===== Validation des hypothèses =====
+H1: NON CONFIRMÉE / NUANCÉE — Non confirmée telle quelle : le meilleur modèle est Logistic Regression (F1=0.8889).
+H2: NON CONFIRMÉE / NUANCÉE — Partiellement confirmée : 2/4 modèles améliorés.
+H3: CONFIRMÉE — Confirmée : LR maximise le compromis F1 / temps.
+
+[OK] Expérimentation terminée. Résultats dans results/

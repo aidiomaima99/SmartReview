@@ -1,0 +1,38 @@
+{
+  "H1": {
+    "statement": "H1 — SVM surpasse NB, RF et LR en F1-score",
+    "best_model": "Logistic Regression",
+    "f1_scores": {
+      "Naive Bayes": 0.8585788903124076,
+      "Logistic Regression": 0.891675718376617,
+      "SVM (LinearSVC)": 0.8806371329019412,
+      "Random Forest": 0.8469577107139369
+    },
+    "confirmed": false,
+    "comment": "Non confirmée telle quelle : le meilleur modèle est Logistic Regression (F1=0.8917)."
+  },
+  "H2": {
+    "statement": "H2 — Le prétraitement NLP améliore les performances",
+    "f1_deltas": {
+      "Naive Bayes": -0.0030080362479388834,
+      "Logistic Regression": -0.004074877334264704,
+      "SVM (LinearSVC)": -0.00796441871930409,
+      "Random Forest": -0.0016814120587280712
+    },
+    "models_improved": 0,
+    "confirmed": false,
+    "comment": "Partiellement confirmée : 0/4 modèles améliorés."
+  },
+  "H3": {
+    "statement": "H3 — La Régression Logistique offre le meilleur compromis performance/temps/simplicité",
+    "compromise_scores": {
+      "Naive Bayes": 0.25987694769980535,
+      "Logistic Regression": 0.888879486123297,
+      "SVM (LinearSVC)": 0.7154277435344643,
+      "Random Forest": -0.9999999999326442
+    },
+    "best_compromise": "Logistic Regression",
+    "confirmed": true,
+    "comment": "Confirmée : LR maximise le compromis F1 / temps."
+  }
+}
