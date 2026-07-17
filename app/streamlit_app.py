@@ -1,5 +1,5 @@
 """
-SmartReview Lite — Application Streamlit
+SmartReview — Application Streamlit
 Master BD & IA | AIDI Omaima | ELMOUSSAOUI Fatima
 """
 
@@ -25,7 +25,7 @@ def load_pipeline():
 
 
 def main():
-    st.set_page_config(page_title="SmartReview Lite", page_icon="🎬", layout="centered")
+    st.set_page_config(page_title="SmartReview ", page_icon="🎬", layout="centered")
     st.title("SmartReview Lite")
     st.caption("Analyse automatique des sentiments d'avis clients — Master BD & IA")
 
