@@ -1,4 +1,4 @@
-# SmartReview Lite
+# SmartReview
 
 **Analyse automatique des sentiments des avis clients par Machine Learning**
 
