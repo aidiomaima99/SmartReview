@@ -165,7 +165,6 @@ SmartReview/
 │   ├── metrics_all.csv       ← tableau de résultats
 │   ├── hypotheses_validation.json
 │   └── figures/              ← graphiques
-└── reports/
 ```
 
 ---
